@@ -14,7 +14,7 @@ This is a beginner-friendly AI agent built from scratch using Python and OpenAI 
 pip install -r requirements.txt
 
 2. Add your OpenAI API key:
-setx OPENAI_API_KEY "OPEN API KEY"
+setx OPENAI_API_KEY "OPENAI_API_KEY"
 
 3. Run the agent:
 python agent.py
