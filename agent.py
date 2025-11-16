@@ -26,7 +26,7 @@ Given these tasks: {tasks}
 
 # ---------- MAIN APP ----------
 if __name__ == "__main__":
-    print("Simple AI Agent")
+    print("Task Assistant Agent")
     tasks = input("Enter tasks separated by commas: ")
     tasks_list = [t.strip() for t in tasks.split(",")]
 
