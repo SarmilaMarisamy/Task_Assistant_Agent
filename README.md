@@ -1,86 +1,47 @@
-Project Overview
+# Task Assistant Agent
 
-Managing daily tasks manually can be tedious and often leads to missed deadlines or mis-prioritized work. The Task Assistant Agent is an intelligent assistant that helps users add, update, delete, complete, and prioritize tasks efficiently. The agent uses AI reasoning to automatically decide the priority of tasks and organizes them for the user.
+**AI Task Management Agent** – Beginner-friendly agent built for the Kaggle 5-Day AI Agents Capstone (Freestyle Track).
 
-Key Features
+---
 
-Add tasks: Users can add tasks in natural language, e.g., "add task: Buy groceries". The agent assigns a priority automatically (high, medium, low).
+## Project Overview
+Managing daily tasks manually can be tedious and often leads to mis-prioritization or missed deadlines. The **AI Task Management Agent** is an intelligent assistant that helps users **manage, prioritize, and organize tasks efficiently**.  
 
-Update tasks: Change the title or priority of existing tasks.
+It leverages a **language model (LLM)** to analyze task descriptions and automatically assign priority levels (high, medium, low), while allowing users to perform all task operations through simple natural language commands.
 
-Delete tasks: Remove tasks from the system.
+---
 
-Complete tasks: Mark tasks as completed.
+## Key Features
+- **Add tasks**: Add a task in natural language; the agent analyzes and assigns priority automatically.
+- **Update tasks**: Rename tasks or change priority.
+- **Delete tasks**: Remove tasks from the system.
+- **Complete tasks**: Mark tasks as completed.
+- **List tasks**: View all tasks along with priority and status.
+- **Prioritize tasks**: Sort tasks by priority automatically.
+- **Memory & persistence**: Tasks are saved in `task_db.json` to retain information between sessions.
 
-List tasks: View all tasks with their title, priority, and status.
+---
 
-Prioritize tasks: Sort tasks by priority automatically.
+## Installation
 
-Persistent memory: Tasks are stored in task_db.json to keep track of them between sessions.
-
-How It Works
-
-The agent reads your natural language input.
-
-If needed, it calls a tool function (add_task, update_task, etc.) to act on the task database.
-
-Uses a language model (LLM) to analyze the task description and classify priority.
-
-Updates the JSON database and responds back to the user.
-
-This loop allows the agent to reason, act, and remember, which makes it a simple yet effective AI Agent.
-
-Getting Started
-
-Clone the repository or download the project folder.
-
-Install dependencies:
-
+1. Clone this repository:
+```bash
+git clone https://github.com/SarmilaMarisamy/Task_Assistant_Agent.git
+cd Task_Assistant_Agent
+2. Install dependencies:
 pip install -r requirements.txt
-
-
+Set your OpenAI API key in your environment:
+export OPENAI_API_KEY="your_api_key_here"   # Linux/Mac
+setx OPENAI_API_KEY "your_api_key_here"      # Windows
+Usage
 Run the agent:
-
 python main.py
-
-
-First run: task_db.json will be automatically created if it doesn’t exist.
-
-Commands examples:
-
-add task: Finish report
-
-update task Finish report set priority high
-
-delete task Finish report
-
-complete task Finish report
-
+Example Commands:
+add task: Buy groceries
+update task Buy groceries set priority high
+delete task Buy groceries
+complete task Buy groceries
 list tasks
-
 prioritize tasks
+The agent will respond with the appropriate action, automatically reasoning about priority and updating the task database.
 
-Value Proposition
-
-Reduces manual effort in task management.
-
-Helps users focus on high-priority tasks.
-
-Improves productivity by automating task prioritization.
-
-Demonstrates AI reasoning, tool usage, and memory management.
-
-Optional Demo
-You: add task: Buy groceries
-Agent: Task added: Buy groceries (priority: medium)
-
-You: add task: Submit assignment
-Agent: Task added: Submit assignment (priority: high)
-
-You: list tasks
-Agent:
-- Buy groceries (priority: medium, pending)
-- Submit assignment (priority: high, pending)
-
-
-This README.md is ready for GitHub or Kaggle submission and clearly explains your project for judges.
