@@ -33,15 +33,19 @@ pip install -r requirements.txt
 Set your OpenAI API key in your environment:
 export OPENAI_API_KEY="your_api_key_here"   # Linux/Mac
 setx OPENAI_API_KEY "your_api_key_here"      # Windows
-Usage
-Run the agent:
+
+## Usage
+
+1. Run the agent:
 python main.py
-Example Commands:
+2. Example Commands:
 add task: Buy groceries
 update task Buy groceries set priority high
 delete task Buy groceries
 complete task Buy groceries
 list tasks
 prioritize tasks
+
+
 The agent will respond with the appropriate action, automatically reasoning about priority and updating the task database.
 
